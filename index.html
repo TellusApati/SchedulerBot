@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <style>
+
+        body {
+            background-color: gray;
+        }
+
+        #lesson {
+            margin-top: 10px;
+            background-color: powderblue;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+
+        #name {
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+
+        #room {
+            text-align: right;
+            margin-top: -34px;
+            margin-right: 10px;
+            text-decoration-line: underline;
+            color: gray;
+            font-style: italic;
+        }
+
+        #time {
+            margin-left: 10px;
+            color: gray;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="lessons"></div>
+
+<script src="https://telegram.org/js/telegram-web-app.js">
+    let tg = window.Telegram.WebApp;
+
+    createLesson("VVP", "9:00", "1-120");
+    createLesson("Calculus", "10:40", "2-319");
+
+    createLesson(tg.initData, "", "");
+
+    function createLesson(inputName, inputTime, inputRoom) {
+        var name = document.createElement("p");
+        name.id = "name";
+        name.innerHTML = inputName;
+
+        var time = document.createElement("p");
+        time.id = "time";
+        time.innerHTML = inputTime;
+
+        var room = document.createElement("p");
+        room.id = "room";
+        room.innerHTML = inputRoom;
+
+        var lesson = document.createElement("div");
+        lesson.id = "lesson";
+        lesson.appendChild(name);
+        lesson.appendChild(room);
+        lesson.appendChild(time);
+
+
+        var lessons = document.getElementById("lessons");
+        lessons.appendChild(lesson);
+    }
+
+
+</script>
+
+</body>
+</html>
