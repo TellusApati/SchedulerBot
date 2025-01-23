@@ -40,13 +40,11 @@
 
 <div id="lessons"></div>
 
-<script src="https://telegram.org/js/telegram-web-app.js">
-    let tg = window.Telegram.WebApp;
+<script>
 
     createLesson("VVP", "9:00", "1-120");
     createLesson("Calculus", "10:40", "2-319");
 
-    createLesson(tg.initData, "", "");
 
     function createLesson(inputName, inputTime, inputRoom) {
         var name = document.createElement("p");
