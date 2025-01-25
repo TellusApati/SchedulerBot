@@ -14,4 +14,9 @@
         <TIME>12:00</TIME>
         <ROOM>с\к Олимп</ROOM>
     </LESSON>
+    <LESSON>
+        <NAME>ОВП</NAME>
+        <TIME>3:00</TIME>
+        <ROOM>Везде</ROOM>
+    </LESSON>
 </LESSONS>
