@@ -18,6 +18,14 @@
             border-color: #111419;
         }
 
+        #lecture {
+            margin-top: 10px;
+            background-color: #3f3f95;
+            border: 2px solid;
+            border-radius: 20px;
+            border-color: #111419;
+        }
+
 
         #name {
             margin-left: 10px;
@@ -53,7 +61,7 @@
 
     loadLessons();
 
-    function createLesson(inputName, inputTime, inputRoom) {
+    function createLesson(inputName, inputTime, inputRoom, isLecture) {
         var name = document.createElement("p");
         name.id = "name";
         name.innerHTML = inputName;
@@ -67,7 +75,11 @@
         room.innerHTML = inputRoom;
 
         var lesson = document.createElement("div");
-        lesson.id = "lesson";
+        if (isLecture == "true") {
+            lesson.id = "lecture";
+        } else {
+            lesson.id = "lesson";
+        }
         lesson.appendChild(name);
         lesson.appendChild(room);
         lesson.appendChild(time);
@@ -94,7 +106,11 @@
                     .getElementsByTagName("ROOM")[0]
                     .childNodes[0]
                     .nodeValue;
-                createLesson(name, time, room);
+                let isLecture = xml[i]
+                    .getElementsByTagName("LECTURE")[0]
+                    .childNodes[0]
+                    .nodeValue;
+                createLesson(name, time, room, isLecture);
             }
         }
         xhttp.open("GET", "lessons.xml");
