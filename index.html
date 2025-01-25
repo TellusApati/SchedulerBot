@@ -7,22 +7,22 @@
     <style>
 
         body {
-            background-color: var(--tg-theme-secondary-bg-color);
+            background-color: #24272e;
         }
 
         #lesson {
             margin-top: 10px;
-            background-color: var(--tg-theme-bg-color);
+            background-color: #111419;
             border: 2px solid;
             border-radius: 20px;
-            border-color: var(--tg-theme-bg-color);
+            border-color: #111419;
         }
 
 
         #name {
             margin-left: 10px;
             margin-top: 20px;
-            color: var(--tg-theme-text-color);
+            color: #f5f5f5;
             font: caption;
         }
 
@@ -31,14 +31,14 @@
             margin-top: -34px;
             margin-right: 10px;
             text-decoration-line: underline;
-            color: var(--tg-theme-hint-color);
+            color: #666d77;
             font-style: italic;
             font: caption;
         }
 
         #time {
             margin-left: 10px;
-            color: var(--tg-theme-hint-color);
+            color: #666d77;
             font: caption;
         }
 
@@ -51,10 +51,7 @@
 <script>
     let tg = window.Telegram.WebApp;
 
-    createLesson("Введение в программирование", "9:00", "1-120");
-    createLesson("Calculus", "10:40", "2-319");
-
-    createLesson(tg.initData, "", "");
+    loadLessons();
 
     function createLesson(inputName, inputTime, inputRoom) {
         var name = document.createElement("p");
@@ -78,6 +75,30 @@
 
         var lessons = document.getElementById("lessons");
         lessons.appendChild(lesson);
+    }
+
+    function loadLessons() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            const xml = this.responseXML.getElementsByTagName("LESSON");
+            for (let i = 0; i < xml.length; i++) {
+                let name = xml[i]
+                    .getElementsByTagName("NAME")[0]
+                    .childNodes[0]
+                    .nodeValue;
+                let time = xml[i]
+                    .getElementsByTagName("TIME")[0]
+                    .childNodes[0]
+                    .nodeValue;
+                let room = xml[i]
+                    .getElementsByTagName("ROOM")[0]
+                    .childNodes[0]
+                    .nodeValue;
+                createLesson(name, time, room);
+            }
+        }
+        xhttp.open("GET", "lessons.xml");
+        xhttp.send();
     }
 
 </script>

@@ -1,0 +1,17 @@
+<LESSONS>
+    <LESSON>
+        <NAME>Введение в программирование</NAME>
+        <TIME>9:00</TIME>
+        <ROOM>1-120</ROOM>
+    </LESSON>
+    <LESSON>
+        <NAME>Математический анализ</NAME>
+        <TIME>10:40</TIME>
+        <ROOM>2-319</ROOM>
+    </LESSON>
+    <LESSON>
+        <NAME>Физра</NAME>
+        <TIME>12:00</TIME>
+        <ROOM>с\к Олимп</ROOM>
+    </LESSON>
+</LESSONS>
