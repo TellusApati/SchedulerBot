@@ -1,5 +1,6 @@
 <lessons>
     <lesson>
+        <short-name>ИСТ</short-name>
         <name>(ИСТ) Информационные системы и технологии</name>
         <room>1-120</room>
         <lecturer>Крейдер О.А.</lecturer>
@@ -9,6 +10,7 @@
         <week>both</week>
     </lesson>
     <lesson>
+        <short-name>Инженерная графика</short-name>
         <name>Инженерная графика</name>
         <room>3 корп.</room>
         <lecturer>Мороз В.В.</lecturer>

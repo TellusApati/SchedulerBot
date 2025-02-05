@@ -1,5 +1,6 @@
 <lessons>
     <lesson>
+        <short-name>Математический анализ</short-name>
         <name>Математический анализ</name>
         <room>2-310</room>
         <lecturer>Гришанина Г.Э.</lecturer>
@@ -9,6 +10,7 @@
         <week>odd</week>
     </lesson>
     <lesson>
+        <short-name>Правоведение</short-name>
         <name>Правоведение</name>
         <room>1-417б</room>
         <lecturer>Коваленко М.А.</lecturer>
@@ -18,6 +20,7 @@
         <week>even</week>
     </lesson>
     <lesson>
+        <short-name>Компьютерный практикум</short-name>
         <name>Компьютерный практикум</name>
         <room>4-222</room>
         <lecturer>Беднякова Т.М.</lecturer>
@@ -27,6 +30,7 @@
         <week>both</week>
     </lesson>
     <lesson>
+        <short-name>Волейбол</short-name>
         <name>Волейбол</name>
         <room>с/к Олимп</room>
         <lecturer>Сандалова Т.В.</lecturer>
