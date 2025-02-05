@@ -26,7 +26,6 @@
             border-color: #3f3f95;
         }
 
-
         #name {
             margin-left: 10px;
             margin-top: 20px;
@@ -44,37 +43,106 @@
             font: caption;
         }
 
+        #lecturer {
+            text-align: right;
+            margin-right: 10px;
+            color: #666d77;
+            font: caption;
+        }
+
         #time {
+            margin-top: -34px;
             margin-left: 10px;
             color: #666d77;
             font: caption;
+        }
+
+        #prev-day {
+            background-color: #111419;
+            border: 5px solid;
+            border-radius: 20px;
+            border-color: #111419;
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            white-space: nowrap;
+            color: #666d77;
+            font: caption;
+        }
+
+        #next-day {
+            background-color: #111419;
+            border: 5px solid;
+            border-radius: 20px;
+            border-color: #111419;
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            white-space: nowrap;
+            color: #666d77;
+            font: caption;
+        }
+
+        #target-day {
+            background-color: #111419;
+            border: 5px solid;
+            border-radius: 20px;
+            border-color: #111419;
+            height: 30px;
+            color: #666d77;
+            font: caption;
+        }
+
+        .navigation {
+            margin: auto;
+            width: 8%;
         }
 
     </style>
 </head>
 <body>
 
+<p id="time"></p>
+
+<div class="navigation">
+    <button id="prev-day" onclick="loadPrevDay()">⇐</button>
+    <span id="target-day">wed</span>
+    <button id="next-day" onclick="loadNextDay()">⇒</button>
+</div>
+
 <div id="lessons"></div>
 
 <script>
-    let tg = window.Telegram.WebApp;
+    var tg = window.Telegram.WebApp;
+    var targetDay = new Date().getDay();
 
-    loadLessons();
+    loadLessons(targetDay);
+    setTargetDayName(targetDay)
+    setInterval(lifecycle, 500);
 
-    function createLesson(inputName, inputTime, inputRoom, isLecture) {
-        var name = document.createElement("p");
+
+    function createLesson(inputName, inputHours, inputMinutes, inputRoom, inputLecturer, isLecture) {
+        let name = document.createElement("p");
         name.id = "name";
         name.innerHTML = inputName;
 
-        var time = document.createElement("p");
+        let time = document.createElement("p");
         time.id = "time";
-        time.innerHTML = inputTime;
+        if (inputMinutes < 10) {
+            time.innerHTML =  inputHours + ":0" + inputMinutes;
+        } else {
+            time.innerHTML =  inputHours + ":" + inputMinutes;
+        }
 
-        var room = document.createElement("p");
+        let room = document.createElement("p");
         room.id = "room";
         room.innerHTML = inputRoom;
 
-        var lesson = document.createElement("div");
+        let lecturer = document.createElement("p");
+        lecturer.id = "lecturer";
+        lecturer.innerHTML = inputLecturer;
+
+        let lesson = document.createElement("div");
         if (isLecture == "true") {
             lesson.id = "lecture";
         } else {
@@ -82,40 +150,154 @@
         }
         lesson.appendChild(name);
         lesson.appendChild(room);
+        lesson.appendChild(lecturer);
         lesson.appendChild(time);
 
 
-        var lessons = document.getElementById("lessons");
+        let lessons = document.getElementById("lessons");
         lessons.appendChild(lesson);
     }
 
-    function loadLessons() {
+    function loadLessons(targetDay) {
+        clearLessons();
+
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function() {
-            const xml = this.responseXML.getElementsByTagName("LESSON");
+            const xml = this.responseXML.getElementsByTagName("lesson");
             for (let i = 0; i < xml.length; i++) {
                 let name = xml[i]
-                    .getElementsByTagName("NAME")[0]
+                    .getElementsByTagName("name")[0]
                     .childNodes[0]
                     .nodeValue;
-                let time = xml[i]
-                    .getElementsByTagName("TIME")[0]
+                let hours = xml[i]
+                    .getElementsByTagName("hours")[0]
+                    .childNodes[0]
+                    .nodeValue;
+                let minutes = xml[i]
+                    .getElementsByTagName("minutes")[0]
                     .childNodes[0]
                     .nodeValue;
                 let room = xml[i]
-                    .getElementsByTagName("ROOM")[0]
+                    .getElementsByTagName("room")[0]
+                    .childNodes[0]
+                    .nodeValue;
+                let lecturer = xml[i]
+                    .getElementsByTagName("lecturer")[0]
                     .childNodes[0]
                     .nodeValue;
                 let isLecture = xml[i]
-                    .getElementsByTagName("LECTURE")[0]
+                    .getElementsByTagName("lecture")[0]
                     .childNodes[0]
                     .nodeValue;
-                createLesson(name, time, room, isLecture);
+                createLesson(name, hours, minutes, room, lecturer, isLecture);
             }
         }
-        xhttp.open("GET", "lessons.xml");
+        xhttp.open("GET", "groups\\1251\\" + getDay(targetDay) + ".xml");
         xhttp.send();
     }
+
+    function clearLessons() {
+        let lesson = document.getElementById("lesson");
+        while (lesson != null) {
+            lesson.remove();
+            lesson = document.getElementById("lesson");
+        }
+        lesson = document.getElementById("lecture")
+        while (lesson != null) {
+            lesson.remove();
+            lesson = document.getElementById("lecture");
+        }
+    }
+
+    function getDay(dayNumber) {
+        let day = ""
+        switch (dayNumber) {
+            case 0:
+                day = "sunday";
+                break;
+            case 1:
+                day = "monday";
+                break;
+            case 2:
+                day = "tuesday";
+                break;
+            case 3:
+                day = "wednesday";
+                break;
+            case 4:
+                day = "thursday";
+                break;
+            case 5:
+                day = "friday";
+                break;
+            case 6:
+                day = "saturday";
+        }
+        return day;
+    }
+
+    function getDayName(dayNumber) {
+        let day = ""
+        switch (dayNumber) {
+            case 0:
+                day = "вс";
+                break;
+            case 1:
+                day = "пн";
+                break;
+            case 2:
+                day = "вт";
+                break;
+            case 3:
+                day = "ср";
+                break;
+            case 4:
+                day = "чт";
+                break;
+            case 5:
+                day = "пт";
+                break;
+            case 6:
+                day = "сб";
+        }
+        return day;
+    }
+
+    function setTargetDayName(dayNumber) {
+        let element = document.getElementById("target-day");
+        element.innerHTML = getDayName(dayNumber);
+    }
+
+    function generateCurrentTime() {
+        let date = new Date();
+
+        let element = document.getElementById("time");
+        element.innerHTML = "Current time: " + date.getHours() + " " + date.getMinutes() + " " + date.getSeconds();
+    }
+
+    function loadNextDay() {
+        targetDay += 1;
+        if (targetDay > 6) {
+            targetDay = 0;
+        }
+        loadLessons(targetDay);
+        setTargetDayName(targetDay);
+    }
+
+    function loadPrevDay() {
+        targetDay -= 1;
+        if (targetDay < 0) {
+            targetDay = 6;
+        }
+        loadLessons(targetDay);
+        setTargetDayName(targetDay);
+    }
+
+    function lifecycle() {
+        generateCurrentTime();
+    }
+
+
 
 </script>
 
