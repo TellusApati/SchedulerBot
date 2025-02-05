@@ -50,44 +50,52 @@ body {
 }
 
 #prev-day {
-    background-color: #111419;
-    border: 5px solid;
+    border: 0px solid;
     border-radius: 20px;
     border-color: #111419;
+
     height: 30px;
     width: 30px;
-    display: inline-block;
-    white-space: nowrap;
+
     color: #666d77;
     font: caption;
+
+    background-color: #111419;
+    margin: auto;
 }
 
 #next-day {
-    background-color: #111419;
-    border: 5px solid;
+    border: 0px solid;
     border-radius: 20px;
     border-color: #111419;
+
     height: 30px;
     width: 30px;
-    display: inline-block;
-    white-space: nowrap;
+
     color: #666d77;
     font: caption;
+
+    background-color: #111419;
+    margin: auto;
 }
 
 #target-day {
-    background-color: #111419;
-    border: 5px solid;
+    border: 0px solid;
     border-radius: 20px;
     border-color: #111419;
+
     height: 30px;
+
     color: #666d77;
     font: caption;
+
+    background-color: #111419;
+    margin: auto;
+
 }
 
 #navigation {
-    margin: auto;
-    width: 50%;
+    text-align:center;
 }
 
 #version {
@@ -96,4 +104,5 @@ body {
     margin: auto;
     margin-top: 50px;
     width: 10%;
+    text-align: center;
 }
