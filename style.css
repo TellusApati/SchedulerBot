@@ -87,7 +87,7 @@ body {
 
 #navigation {
     margin: auto;
-    width: 15%;
+    width: 30%;
 }
 
 #version {
@@ -95,5 +95,5 @@ body {
     font: caption;
     margin: auto;
     margin-top: 50px;
-    width: 5%;
+    width: 10%;
 }
