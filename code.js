@@ -13,8 +13,8 @@ loadLessons();
 setTargetDayName(targetDate.getDay())
 setInterval(lifecycle, 1000);
 
-var MainButton = WebApp.MainButton;
-var BackButton = WebApp.BackButton;
+var MainButton = tg.MainButton;
+var BackButton = tg.BackButton;
 
 MainButton.show();
 BackButton.show();
