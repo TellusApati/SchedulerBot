@@ -1,0 +1,38 @@
+<lessons>
+    <lesson>
+        <name>(ООП) Объектно-ориентированное программирование</name>
+        <room>1-118</room>
+        <lecturer>Сычева М.П.</lecturer>
+        <hours>9</hours>
+        <minutes>0</minutes>
+        <lecture>true</lecture>
+        <week>both</week>
+    </lesson>
+    <lesson>
+        <name>Иностранный язык</name>
+        <room>4-412</room>
+        <lecturer>Козловская Д.С.</lecturer>
+        <hours>10</hours>
+        <minutes>40</minutes>
+        <lecture>false</lecture>
+        <week>both</week>
+    </lesson>
+    <lesson>
+        <name>(ООП) Объектно-ориентированное программирование</name>
+        <room>1-416</room>
+        <lecturer>Сычева М.П.</lecturer>
+        <hours>12</hours>
+        <minutes>50</minutes>
+        <lecture>false</lecture>
+        <week>both</week>
+    </lesson>
+    <lesson>
+        <name>История России</name>
+        <room>4-316</room>
+        <lecturer>Король М.П.</lecturer>
+        <hours>14</hours>
+        <minutes>30</minutes>
+        <lecture>false</lecture>
+        <week>even</week>
+    </lesson>
+</lessons>

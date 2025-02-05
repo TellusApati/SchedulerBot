@@ -1,0 +1,38 @@
+<lessons>
+    <lesson>
+        <name>Математический анализ</name>
+        <room>2-310</room>
+        <lecturer>Гришанина Г.Э.</lecturer>
+        <hours>10</hours>
+        <minutes>40</minutes>
+        <lecture>false</lecture>
+        <week>odd</week>
+    </lesson>
+    <lesson>
+        <name>Правоведение</name>
+        <room>1-417б</room>
+        <lecturer>Коваленко М.А.</lecturer>
+        <hours>10</hours>
+        <minutes>40</minutes>
+        <lecture>false</lecture>
+        <week>even</week>
+    </lesson>
+    <lesson>
+        <name>Компьютерный практикум</name>
+        <room>4-222</room>
+        <lecturer>Беднякова Т.М.</lecturer>
+        <hours>12</hours>
+        <minutes>50</minutes>
+        <lecture>false</lecture>
+        <week>both</week>
+    </lesson>
+    <lesson>
+        <name>Волейбол</name>
+        <room>с/к Олимп</room>
+        <lecturer>Сандалова Т.В.</lecturer>
+        <hours>14</hours>
+        <minutes>30</minutes>
+        <lecture>false</lecture>
+        <week>both</week>
+    </lesson>
+</lessons>

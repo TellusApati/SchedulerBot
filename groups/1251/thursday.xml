@@ -1,0 +1,20 @@
+<lessons>
+    <lesson>
+        <name>(ИСТ) Информационные системы и технологии</name>
+        <room>1-120</room>
+        <lecturer>Крейдер О.А.</lecturer>
+        <hours>9</hours>
+        <minutes>0</minutes>
+        <lecture>true</lecture>
+        <week>both</week>
+    </lesson>
+    <lesson>
+        <name>Инженерная графика</name>
+        <room>3 корп.</room>
+        <lecturer>Мороз В.В.</lecturer>
+        <hours>10</hours>
+        <minutes>40</minutes>
+        <lecture>false</lecture>
+        <week>both</week>
+    </lesson>
+</lessons>

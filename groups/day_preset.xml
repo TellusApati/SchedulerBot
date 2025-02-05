@@ -1,0 +1,11 @@
+<lessons>
+    <lesson>
+        <name></name>
+        <room></room>
+        <lecturer></lecturer>
+        <hours></hours>
+        <minutes></minutes>
+        <lecture></lecture>
+        <week></week>
+    </lesson>
+</lessons>

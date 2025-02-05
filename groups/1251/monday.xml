@@ -1,0 +1,47 @@
+<lessons>
+    <lesson>
+        <name>(АВС) Архитектура вычислительных систем</name>
+        <room>1-122</room>
+        <lecturer>Земляная Е.В.</lecturer>
+        <hours>9</hours>
+        <minutes>0</minutes>
+        <lecture>true</lecture>
+        <week>odd</week>
+    </lesson>
+    <lesson>
+        <name>Математический анализ</name>
+        <room>1-120</room>
+        <lecturer>Гришанина Г.Э.</lecturer>
+        <hours>10</hours>
+        <minutes>40</minutes>
+        <lecture>true</lecture>
+        <week>both</week>
+    </lesson>
+    <lesson>
+        <name>Иностранный язык</name>
+        <room>4-411a</room>
+        <lecturer>Козловская Д.С.</lecturer>
+        <hours>12</hours>
+        <minutes>50</minutes>
+        <lecture>false</lecture>
+        <week>both</week>
+    </lesson>
+    <lesson>
+        <name>Математический анализ</name>
+        <room>2-310</room>
+        <lecturer>Гришанина Г.Э.</lecturer>
+        <hours>14</hours>
+        <minutes>30</minutes>
+        <lecture>false</lecture>
+        <week>both</week>
+    </lesson>
+    <lesson>
+        <name>Волейбол</name>
+        <room>с/к Олимп</room>
+        <lecturer>Сандалова Т.В.</lecturer>
+        <hours>16</hours>
+        <minutes>10</minutes>
+        <lecture>false</lecture>
+        <week>both</week>
+    </lesson>
+</lessons>
