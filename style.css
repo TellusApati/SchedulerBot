@@ -94,15 +94,60 @@ body {
 
 }
 
-#navigation {
+#navigation-bar {
     text-align:center;
 }
 
-#version {
+#details-name {
+    margin-left: 10px;
+    color: #f5f5f5;
+    font: caption;
+    font-size: 25px;
+}
+
+#details-room-name {
+    color: #f5f5f5;
+    font: caption;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+#details-room {
+    text-decoration-line: underline;
+    font-style: italic;
     color: #666d77;
     font: caption;
-    margin: auto;
-    margin-top: 50px;
-    width: 10%;
-    text-align: center;
+    font-size: 20px;
+    margin-left: 120px;
+    margin-top: -42.5px;
+}
+
+#details-lecturer-name {
+    color: #f5f5f5;
+    font: caption;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+#details-lecturer {
+    color: #666d77;
+    font: caption;
+    font-size: 20px;
+    margin-left: 170px;
+    margin-top: -42.5px;
+}
+
+#details-description-name {
+    color: #f5f5f5;
+    font: caption;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+#details-description {
+    color: #666d77;
+    font: caption;
+    font-size: 20px;
+    margin-top: -10px;
+    margin-left: 10px;
 }

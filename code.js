@@ -3,21 +3,56 @@ const dayNames = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
 
 var tg = window.Telegram.WebApp;
 var targetDate = new Date();
+var backButton = tg.BackButton;
+tg.onEvent("backButtonClicked",() => closeLesson())
+//backButton.onClick(closeLesson());
 
+// HTML groups
+var navigationBar = document.getElementById("navigation-bar");
+var lessons = document.getElementById("lessons");
+var lessonDetails = document.getElementById("lesson-details");
+
+// Дата начала первого & второго семестров
 var firstSemesterStart = new Date("2000-09-01");
 firstSemesterStart.setFullYear(targetDate.getFullYear());
 var secondSemesterStart = new Date("2000-02-10");
 secondSemesterStart.setFullYear(targetDate.getFullYear());
 
+
+createNavigation();
 loadLessons();
 setTargetDayName(targetDate.getDay())
-setInterval(lifecycle, 1000);
+//setInterval(lifecycle, 1000);
 
-var MainButton = tg.MainButton;
-var BackButton = tg.BackButton;
 
-MainButton.show();
-BackButton.show();
+function createNavigation() {
+    let prevButton = document.createElement("button");
+    prevButton.id = "prev-day";
+    prevButton.innerText = "⇐";
+    prevButton.addEventListener("click", () => loadDay(-1));
+
+    let targetButton = document.createElement("button");
+    targetButton.id = "target-day";
+
+    let nextButton = document.createElement("button");
+    nextButton.id = "next-day";
+    nextButton.innerText = "⇒";
+    nextButton.addEventListener("click", () => loadDay(1));
+
+    navigationBar.appendChild(prevButton);
+    navigationBar.appendChild(targetButton);
+    navigationBar.appendChild(nextButton);
+};
+
+function removeNavigation() {
+    let button = document.getElementById("prev-day");
+    button.remove();
+    button = document.getElementById("next-day");
+    button.remove();
+    button = document.getElementById("target-day");
+    button.remove();
+};
+
 
 
 function clearLessons() {
@@ -37,7 +72,7 @@ function loadLessons() {
     clearLessons();
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
-        const xml = this.responseXML.getElementsByTagName("lesson");
+        let xml = this.responseXML.getElementsByTagName("lesson");
         for (let i = 0; i < xml.length; i++) {
             let weekType = xml[i]
                 .getElementsByTagName("week")[0]
@@ -46,6 +81,10 @@ function loadLessons() {
             if (weekType == "both" || weekType == getWeekType()) {
                 let name = xml[i]
                     .getElementsByTagName("short-name")[0]
+                    .childNodes[0]
+                    .nodeValue;
+                let fullName = xml[i]
+                    .getElementsByTagName("name")[0]
                     .childNodes[0]
                     .nodeValue;
                 let hours = xml[i]
@@ -68,7 +107,7 @@ function loadLessons() {
                     .getElementsByTagName("lecture")[0]
                     .childNodes[0]
                     .nodeValue;
-                createLesson(name, hours, minutes, room, lecturer, isLecture, weekType);
+                createLesson(name, hours, minutes, room, lecturer, isLecture, fullName);
             }
         }
     }
@@ -76,18 +115,14 @@ function loadLessons() {
     xhttp.send();
 }
 
-function createLesson(inputName, inputHours, inputMinutes, inputRoom, inputLecturer, isLecture) {
+function createLesson(inputName, hours, minutes, inputRoom, inputLecturer, isLecture, fullName) {
     let name = document.createElement("p");
     name.id = "name";
     name.innerHTML = inputName;
 
     let time = document.createElement("p");
     time.id = "time";
-    if (inputMinutes < 10) {
-        time.innerHTML =  inputHours + ":0" + inputMinutes;
-    } else {
-        time.innerHTML =  inputHours + ":" + inputMinutes;
-    }
+    time.innerHTML = hours + ":" + standardizeDate(minutes);
 
     let room = document.createElement("p");
     room.id = "room";
@@ -108,10 +143,12 @@ function createLesson(inputName, inputHours, inputMinutes, inputRoom, inputLectu
     lesson.appendChild(lecturer);
     lesson.appendChild(time);
 
+    lesson.addEventListener("click", () => openLesson(fullName, inputRoom, inputLecturer, hours, minutes));
 
-    let lessons = document.getElementById("lessons");
     lessons.appendChild(lesson);
 }
+
+
 
 function standardizeDate(inputDate) {
     if (inputDate < 10) {
@@ -142,9 +179,6 @@ function loadDay(offset) {
     setTargetDayName(targetDate.getDay());
 }
 
-function lifecycle() {
-}
-
 function getWeekType() {
     let isSecondSemester = false;
     if (secondSemesterStart.getMonth() < targetDate.getMonth() && targetDate.getMonth() < firstSemesterStart.getMonth()) {
@@ -170,6 +204,90 @@ function getWeekType() {
         return "even";
     }
     return "odd";
+}
 
 
+
+function openLesson(name, room, lecturer, hours, minutes) {
+    clearLessons();
+    removeNavigation();
+
+    let element = document.createElement("p");
+    element.innerHTML = name;
+    element.id = "details-name";
+    lessonDetails.appendChild(element);
+
+    element = document.createElement("p");
+    element.innerHTML = "Аудитория: ";
+    element.id = "details-room-name";
+    lessonDetails.appendChild(element);
+
+    element = document.createElement("p");
+    element.innerHTML = room;
+    element.id = "details-room";
+    lessonDetails.appendChild(element);
+
+    element = document.createElement("p");
+    element.innerHTML = "Преподаватель: ";
+    element.id = "details-lecturer-name";
+    lessonDetails.appendChild(element);
+
+    element = document.createElement("p");
+    element.innerHTML = lecturer;
+    element.id = "details-lecturer";
+    lessonDetails.appendChild(element);
+
+    element = document.createElement("p");
+    element.innerHTML = "Домашнее задание: ";
+    element.id = "details-description-name";
+    lessonDetails.appendChild(element);
+
+    element = document.createElement("p");
+    element.innerHTML = "Домашнее задание не указано.";
+    element.id = "details-description";
+    lessonDetails.appendChild(element);
+
+
+    backButton.show();
+
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        let xml = this.responseXML.getElementsByTagName("task");
+
+        for (let i = 0; i < xml.length; i++) {
+            let hoursElement = xml[i]
+                .getElementsByTagName("hours")[0]
+                .childNodes[0]
+                .nodeValue;
+            let minutesElement = xml[i]
+                .getElementsByTagName("minutes")[0]
+                .childNodes[0]
+                .nodeValue;
+            if (hours = hoursElement && minutes == minutesElement) {
+                let description = xml[i]
+                    .getElementsByTagName("description")[0]
+                    .childNodes[0]
+                    .nodeValue;
+                let descriptionElement = document.getElementById("details-description");
+                descriptionElement.innerHTML = description;
+                break;
+            }
+        }
+    };
+    xhttp.open("GET", "groups\\1251\\hw\\" + standardizeDate(targetDate.getMonth() + 1) + "-" + standardizeDate(targetDate.getDate()) + ".xml");
+    xhttp.send();
+}
+
+function closeLesson() {
+    let element = document.getElementById("details-name");
+    element.remove();
+    element = document.getElementById("details-room");
+    element.remove();
+    element = document.getElementById("details-lecturer");
+    element.remove();
+    element = document.getElementById("details-description");
+    element.remove();
+
+    backButton.hide();
+    loadLessons();
 }
