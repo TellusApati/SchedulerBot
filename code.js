@@ -281,9 +281,15 @@ function openLesson(name, room, lecturer, hours, minutes) {
 function closeLesson() {
     let element = document.getElementById("details-name");
     element.remove();
+    element = document.getElementById("details-room-name");
+    element.remove();
     element = document.getElementById("details-room");
     element.remove();
+    element = document.getElementById("details-lecturer-name");
+    element.remove();
     element = document.getElementById("details-lecturer");
+    element.remove();
+    element = document.getElementById("details-description-name");
     element.remove();
     element = document.getElementById("details-description");
     element.remove();
