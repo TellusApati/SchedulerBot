@@ -18,6 +18,7 @@ var secondSemesterStart = new Date("2000-02-10");
 secondSemesterStart.setFullYear(targetDate.getFullYear());
 
 
+lessonDetails.style.display = "none";
 createNavigation();
 loadLessons();
 //setInterval(lifecycle, 1000);
@@ -107,7 +108,7 @@ function loadLessons() {
                     .getElementsByTagName("lecture")[0]
                     .childNodes[0]
                     .nodeValue;
-                createLesson(name, hours, minutes, room, lecturer, isLecture, fullName);
+                createLesson(name, hours, minutes, room, lecturer, isLecture == "true", fullName);
             }
         }
     }
@@ -133,7 +134,7 @@ function createLesson(inputName, hours, minutes, inputRoom, inputLecturer, isLec
     lecturer.innerHTML = inputLecturer;
 
     let lesson = document.createElement("div");
-    if (isLecture == "true") {
+    if (isLecture) {
         lesson.id = "lecture";
     } else {
         lesson.id = "lesson";
@@ -143,7 +144,7 @@ function createLesson(inputName, hours, minutes, inputRoom, inputLecturer, isLec
     lesson.appendChild(lecturer);
     lesson.appendChild(time);
 
-    lesson.addEventListener("click", () => openLesson(fullName, inputRoom, inputLecturer, hours, minutes));
+    lesson.addEventListener("click", () => openLesson(fullName, inputRoom, inputLecturer, isLecture, hours, minutes));
 
     lessons.appendChild(lesson);
 }
@@ -208,13 +209,28 @@ function getWeekType() {
 
 
 
-function openLesson(name, room, lecturer, hours, minutes) {
+function openLesson(name, room, lecturer, isLecture, hours, minutes) {
     clearLessons();
     removeNavigation();
+    lessonDetails.style.display = "block";
+    if (isLecture) {
+        lessonDetails.style.borderColor = tg.ThemeParams.button_color;
+    } else {
+        lessonDetails.style.borderColor = "#111419";
+    }
 
     let element = document.createElement("p");
     element.innerHTML = name;
     element.id = "details-name";
+    lessonDetails.appendChild(element);
+
+    element = document.createElement("p");
+    if (isLecture) {
+        element.innerHTML = "Лекция";
+    } else {
+        element.innerHTML = "Семинар";
+    }
+    element.id = "details-type";
     lessonDetails.appendChild(element);
 
     element = document.createElement("p");
@@ -282,6 +298,8 @@ function openLesson(name, room, lecturer, hours, minutes) {
 function closeLesson() {
     let element = document.getElementById("details-name");
     element.remove();
+    element = document.getElementById("details-type");
+    element.remove();
     element = document.getElementById("details-room-name");
     element.remove();
     element = document.getElementById("details-room");
@@ -296,6 +314,7 @@ function closeLesson() {
     element.remove();
 
     backButton.hide();
+    lessonDetails.style.display = "none";
     loadLessons();
     createNavigation();
 }

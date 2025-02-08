@@ -1,27 +1,27 @@
 body {
-    background-color: #24272e;
+    background-color: var(--tg-theme-bg-color);
 }
 
 #lesson {
     margin-top: 10px;
-    background-color: #111419;
+    background-color: var(--tg-theme-secondary-bg-color);
     border: 5px solid;
     border-radius: 20px;
-    border-color: #111419;
+    border-color: var(--tg-theme-secondary-bg-color);
 }
 
 #lecture {
     margin-top: 10px;
-    background-color: #111419;
+    background-color: var(--tg-theme-secondary-bg-color);
     border: 5px solid;
     border-radius: 20px;
-    border-color: #3f3f95;
+    border-color: var(--tg-theme-button-color);
 }
 
 #name {
     margin-left: 10px;
     margin-top: 20px;
-    color: #f5f5f5;
+    color: var(--tg-theme-text-color);
     font: caption;
 }
 
@@ -30,7 +30,7 @@ body {
     margin-top: -34px;
     margin-right: 10px;
     text-decoration-line: underline;
-    color: #666d77;
+    color: var(--tg-theme-hint-color);
     font-style: italic;
     font: caption;
 }
@@ -38,58 +38,58 @@ body {
 #lecturer {
     text-align: right;
     margin-right: 10px;
-    color: #666d77;
+    color: var(--tg-theme-hint-color);
     font: caption;
 }
 
 #time {
     margin-top: -34px;
     margin-left: 10px;
-    color: #666d77;
+    color: var(--tg-theme-hint-color);
     font: caption;
 }
 
 #prev-day {
     border: 0px solid;
     border-radius: 20px;
-    border-color: #111419;
+    border-color: var(--tg-theme-secondary-bg-color);
 
     height: 30px;
     width: 30px;
 
-    color: #666d77;
+    color: var(--tg-theme-hint-color);
     font: caption;
 
-    background-color: #111419;
+    background-color: var(--tg-theme-secondary-bg-color);
     margin: auto;
 }
 
 #next-day {
     border: 0px solid;
     border-radius: 20px;
-    border-color: #111419;
+    border-color: var(--tg-theme-secondary-bg-color);
 
     height: 30px;
     width: 30px;
 
-    color: #666d77;
+    color: var(--tg-theme-hint-color);
     font: caption;
 
-    background-color: #111419;
+    background-color: var(--tg-theme-secondary-bg-color);
     margin: auto;
 }
 
 #target-day {
     border: 0px solid;
     border-radius: 20px;
-    border-color: #111419;
+    border-color: var(--tg-theme-secondary-bg-color);
 
     height: 30px;
 
-    color: #666d77;
+    color: var(--tg-theme-hint-color);
     font: caption;
 
-    background-color: #111419;
+    background-color: var(--tg-theme-secondary-bg-color);
     margin: auto;
 
 }
@@ -100,22 +100,20 @@ body {
 
 #details-name {
     margin-left: 10px;
-    color: #f5f5f5;
+    color: var(--tg-theme-text-color);
     font: caption;
     font-size: 25px;
 }
 
 #details-room-name {
-    color: #f5f5f5;
+    color: var(--tg-theme-text-color);
     font: caption;
     font-size: 20px;
     margin-left: 10px;
 }
 
 #details-room {
-    text-decoration-line: underline;
-    font-style: italic;
-    color: #666d77;
+    color: var(--tg-theme-hint-color);
     font: caption;
     font-size: 20px;
     margin-left: 120px;
@@ -123,14 +121,14 @@ body {
 }
 
 #details-lecturer-name {
-    color: #f5f5f5;
+    color: var(--tg-theme-text-color);
     font: caption;
     font-size: 20px;
     margin-left: 10px;
 }
 
 #details-lecturer {
-    color: #666d77;
+    color: var(--tg-theme-hint-color);
     font: caption;
     font-size: 20px;
     margin-left: 170px;
@@ -138,16 +136,32 @@ body {
 }
 
 #details-description-name {
-    color: #f5f5f5;
+    color: var(--tg-theme-text-color);
     font: caption;
     font-size: 25px;
     margin-left: 10px;
 }
 
 #details-description {
-    color: #666d77;
+    color: var(--tg-theme-hint-color);
     font: caption;
     font-size: 20px;
     margin-top: -10px;
     margin-left: 10px;
+}
+
+#details-type {
+    color: var(--tg-theme-hint-color);
+    font: caption;
+    font-size: 20px;
+    margin-left: 10px;
+
+    margin-top: -15px;
+}
+
+#lesson-details {
+    margin-top: 10px;
+    background-color: var(--tg-theme-secondary-bg-color);
+    border: 5px solid;
+    border-radius: 20px;
 }
