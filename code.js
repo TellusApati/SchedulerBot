@@ -4,8 +4,7 @@ const dayNames = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
 var tg = window.Telegram.WebApp;
 var targetDate = new Date();
 var backButton = tg.BackButton;
-tg.onEvent("backButtonClicked",() => closeLesson())
-//backButton.onClick(closeLesson());
+tg.onEvent("backButtonClicked", () => closeLesson())
 
 // HTML groups
 var navigationBar = document.getElementById("navigation-bar");
@@ -21,7 +20,6 @@ secondSemesterStart.setFullYear(targetDate.getFullYear());
 
 createNavigation();
 loadLessons();
-setTargetDayName(targetDate.getDay())
 //setInterval(lifecycle, 1000);
 
 
@@ -42,6 +40,8 @@ function createNavigation() {
     navigationBar.appendChild(prevButton);
     navigationBar.appendChild(targetButton);
     navigationBar.appendChild(nextButton);
+
+    setTargetDayName(targetDate.getDay())
 };
 
 function removeNavigation() {
@@ -72,7 +72,7 @@ function loadLessons() {
     clearLessons();
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
-        let xml = this.responseXML.getElementsByTagName("lesson");
+        const xml = this.responseXML.getElementsByTagName("lesson");
         for (let i = 0; i < xml.length; i++) {
             let weekType = xml[i]
                 .getElementsByTagName("week")[0]
@@ -243,7 +243,6 @@ function openLesson(name, room, lecturer, hours, minutes) {
     lessonDetails.appendChild(element);
 
     element = document.createElement("p");
-    element.innerHTML = "Домашнее задание не указано.";
     element.id = "details-description";
     lessonDetails.appendChild(element);
 
@@ -252,8 +251,8 @@ function openLesson(name, room, lecturer, hours, minutes) {
 
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
-        let xml = this.responseXML.getElementsByTagName("task");
-
+        const xml = this.responseXML.getElementsByTagName("task");
+        let descriptionElement = document.getElementById("details-description");
         for (let i = 0; i < xml.length; i++) {
             let hoursElement = xml[i]
                 .getElementsByTagName("hours")[0]
@@ -268,11 +267,13 @@ function openLesson(name, room, lecturer, hours, minutes) {
                     .getElementsByTagName("description")[0]
                     .childNodes[0]
                     .nodeValue;
-                let descriptionElement = document.getElementById("details-description");
+
                 descriptionElement.innerHTML = description;
-                break;
+                return true;
             }
         }
+        descriptionElement.innerHTML = "Домашнее задание не указано.";
+
     };
     xhttp.open("GET", "groups\\1251\\hw\\" + standardizeDate(targetDate.getMonth() + 1) + "-" + standardizeDate(targetDate.getDate()) + ".xml");
     xhttp.send();
@@ -296,4 +297,5 @@ function closeLesson() {
 
     backButton.hide();
     loadLessons();
+    createNavigation();
 }
