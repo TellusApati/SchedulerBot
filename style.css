@@ -1,27 +1,27 @@
 body {
-    background-color: var(--tg-theme-bg-color);
+    background-color: #24272e;
 }
 
 #lesson {
     margin-top: 10px;
-    background-color: var(--tg-theme-secondary-bg-color);
+    background-color: #111419;
     border: 5px solid;
     border-radius: 20px;
-    border-color: var(--tg-theme-secondary-bg-color);
+    border-color: #111419;
 }
 
 #lecture {
     margin-top: 10px;
-    background-color: var(--tg-theme-secondary-bg-color);
+    background-color: #111419;
     border: 5px solid;
     border-radius: 20px;
-    border-color: var(--tg-theme-button-color);
+    border-color: #3f3f95;
 }
 
 #name {
     margin-left: 10px;
     margin-top: 20px;
-    color: var(--tg-theme-text-color);
+    color: #f5f5f5;
     font: caption;
 }
 
@@ -30,7 +30,7 @@ body {
     margin-top: -34px;
     margin-right: 10px;
     text-decoration-line: underline;
-    color: var(--tg-theme-hint-color);
+    color: #666d77;
     font-style: italic;
     font: caption;
 }
@@ -38,58 +38,58 @@ body {
 #lecturer {
     text-align: right;
     margin-right: 10px;
-    color: var(--tg-theme-hint-color);
+    color: #666d77;
     font: caption;
 }
 
 #time {
     margin-top: -34px;
     margin-left: 10px;
-    color: var(--tg-theme-hint-color);
+    color: #666d77;
     font: caption;
 }
 
 #prev-day {
     border: 0px solid;
     border-radius: 20px;
-    border-color: var(--tg-theme-secondary-bg-color);
+    border-color: #111419;
 
     height: 30px;
     width: 30px;
 
-    color: var(--tg-theme-hint-color);
+    color: #666d77;
     font: caption;
 
-    background-color: var(--tg-theme-secondary-bg-color);
+    background-color: #111419;
     margin: auto;
 }
 
 #next-day {
     border: 0px solid;
     border-radius: 20px;
-    border-color: var(--tg-theme-secondary-bg-color);
+    border-color: #111419;
 
     height: 30px;
     width: 30px;
 
-    color: var(--tg-theme-hint-color);
+    color: #666d77;
     font: caption;
 
-    background-color: var(--tg-theme-secondary-bg-color);
+    background-color: #111419;
     margin: auto;
 }
 
 #target-day {
     border: 0px solid;
     border-radius: 20px;
-    border-color: var(--tg-theme-secondary-bg-color);
+    border-color: #111419;
 
     height: 30px;
 
-    color: var(--tg-theme-hint-color);
+    color: #666d77;
     font: caption;
 
-    background-color: var(--tg-theme-secondary-bg-color);
+    background-color: #111419;
     margin: auto;
 
 }
@@ -100,20 +100,20 @@ body {
 
 #details-name {
     margin-left: 10px;
-    color: var(--tg-theme-text-color);
+    color: #f5f5f5;
     font: caption;
     font-size: 25px;
 }
 
 #details-room-name {
-    color: var(--tg-theme-text-color);
+    color: #f5f5f5;
     font: caption;
     font-size: 20px;
     margin-left: 10px;
 }
 
 #details-room {
-    color: var(--tg-theme-hint-color);
+    color: #666d77;
     font: caption;
     font-size: 20px;
     margin-left: 120px;
@@ -121,14 +121,14 @@ body {
 }
 
 #details-lecturer-name {
-    color: var(--tg-theme-text-color);
+    color: #f5f5f5;
     font: caption;
     font-size: 20px;
     margin-left: 10px;
 }
 
 #details-lecturer {
-    color: var(--tg-theme-hint-color);
+    color: #666d77;
     font: caption;
     font-size: 20px;
     margin-left: 170px;
@@ -136,14 +136,14 @@ body {
 }
 
 #details-description-name {
-    color: var(--tg-theme-text-color);
+    color: #f5f5f5;
     font: caption;
     font-size: 25px;
     margin-left: 10px;
 }
 
 #details-description {
-    color: var(--tg-theme-hint-color);
+    color: #666d77;
     font: caption;
     font-size: 20px;
     margin-top: -10px;
@@ -151,7 +151,7 @@ body {
 }
 
 #details-type {
-    color: var(--tg-theme-hint-color);
+    color: #666d77;
     font: caption;
     font-size: 20px;
     margin-left: 10px;
@@ -161,7 +161,14 @@ body {
 
 #lesson-details {
     margin-top: 10px;
-    background-color: var(--tg-theme-secondary-bg-color);
+    background-color: #111419;
+    border: 5px solid;
+    border-radius: 20px;
+}
+
+#lesson-details {
+    margin-top: 10px;
+    background-color: #111419;
     border: 5px solid;
     border-radius: 20px;
 }

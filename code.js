@@ -200,7 +200,6 @@ function getWeekType() {
     } else {
         deltaTime -= firstSemesterStart.getTime();
     }
-
     if ((Math.floor(deltaTime / week) + 1)%2 == 0) {
         return "even";
     }
@@ -214,7 +213,7 @@ function openLesson(name, room, lecturer, isLecture, hours, minutes) {
     removeNavigation();
     lessonDetails.style.display = "block";
     if (isLecture) {
-        lessonDetails.style.borderColor = tg.ThemeParams.button_color;
+        lessonDetails.style.borderColor = "#3f3f95";
     } else {
         lessonDetails.style.borderColor = "#111419";
     }
@@ -267,8 +266,12 @@ function openLesson(name, room, lecturer, isLecture, hours, minutes) {
 
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
-        const xml = this.responseXML.getElementsByTagName("task");
         let descriptionElement = document.getElementById("details-description");
+        if (this.responseXML == null) {
+            descriptionElement.innerHTML = "Домашнее задание не указано.";
+            return false;
+        }
+        const xml = this.responseXML.getElementsByTagName("task");
         for (let i = 0; i < xml.length; i++) {
             let hoursElement = xml[i]
                 .getElementsByTagName("hours")[0]
