@@ -1,6 +1,7 @@
-body {
+html, body {
     background-color: #24272e;
     font: caption;
+    height: 100%;
 }
 
 
@@ -9,6 +10,8 @@ body {
 
 #navigation-bar {
     text-align:center;
+    height: 5%;
+
 }
 
 button.navigation-button {
@@ -22,17 +25,19 @@ button.navigation-button {
     background-color: #111419;
     margin: auto;
 
-    height: 5em;
-    width: 5em;
+    height: 100%;
+    width: 4%;
     white-space: pre;
 }
 
 #target-day {
-    width: 7em;
+    width: 10%;
 }
 
 
-
+#lessons {
+    height: 95%;
+}
 
 #lesson {
     margin-top: 1em;
@@ -41,7 +46,7 @@ button.navigation-button {
     border-color: #111419;
 
     border-radius: 5em;
-    height: 10em;
+    height: 15%;
 }
 
 #lecture {
@@ -50,21 +55,21 @@ button.navigation-button {
     border: 1em solid;
     border-color: #3f3f95;
     border-radius: 5em;
-    height: 10em;
+    height: 15%;
 }
 
 #name {
-    margin-left: 1em;
-    margin-top: 0.65em;
+    margin-left: 2%;
+    margin-top: 2.5%;
     color: #f5f5f5;
-    font-size: 3em;
+    font-size: 400%;
 }
 
 #time {
-    margin-top: -1.5em;
-    margin-left: 1.5em;
+    margin-top: -4%;
+    margin-left: 1.75%;
     color: #666d77;
-    font-size: 2em;
+    font-size: 200%;
 }
 
 #room {
