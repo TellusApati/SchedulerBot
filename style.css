@@ -1,174 +1,152 @@
 body {
     background-color: #24272e;
-}
-
-#lesson {
-    margin-top: 10px;
-    background-color: #111419;
-    border: 5px solid;
-    border-radius: 20px;
-    border-color: #111419;
-}
-
-#lecture {
-    margin-top: 10px;
-    background-color: #111419;
-    border: 5px solid;
-    border-radius: 20px;
-    border-color: #3f3f95;
-}
-
-#name {
-    margin-left: 10px;
-    margin-top: 20px;
-    color: #f5f5f5;
     font: caption;
 }
 
-#room {
-    text-align: right;
-    margin-top: -34px;
-    margin-right: 10px;
-    text-decoration-line: underline;
-    color: #666d77;
-    font-style: italic;
-    font: caption;
-}
 
-#lecturer {
-    text-align: right;
-    margin-right: 10px;
-    color: #666d77;
-    font: caption;
-}
 
-#time {
-    margin-top: -34px;
-    margin-left: 10px;
-    color: #666d77;
-    font: caption;
-}
 
-#prev-day {
-    border: 0px solid;
-    border-radius: 20px;
-    border-color: #111419;
-
-    height: 30px;
-    width: 30px;
-
-    color: #666d77;
-    font: caption;
-
-    background-color: #111419;
-    margin: auto;
-}
-
-#next-day {
-    border: 0px solid;
-    border-radius: 20px;
-    border-color: #111419;
-
-    height: 30px;
-    width: 30px;
-
-    color: #666d77;
-    font: caption;
-
-    background-color: #111419;
-    margin: auto;
-}
-
-#target-day {
-    border: 0px solid;
-    border-radius: 20px;
-    border-color: #111419;
-
-    height: 30px;
-
-    color: #666d77;
-    font: caption;
-
-    background-color: #111419;
-    margin: auto;
-
-}
 
 #navigation-bar {
     text-align:center;
 }
 
+button.navigation-button {
+    border: 0em solid;
+    border-radius: 20em;
+    border-color: #111419;
+
+    color: #666d77;
+    font: caption;
+
+    background-color: #111419;
+    margin: auto;
+
+    height: 5em;
+    width: 5em;
+    white-space: pre;
+}
+
+#target-day {
+    width: 7em;
+}
+
+
+
+
+#lesson {
+    margin-top: 1em;
+    background-color: #111419;
+    border: 1em solid;
+    border-color: #111419;
+
+    border-radius: 5em;
+    height: 10em;
+}
+
+#lecture {
+    margin-top: 1em;
+    background-color: #111419;
+    border: 1em solid;
+    border-color: #3f3f95;
+    border-radius: 5em;
+    height: 10em;
+}
+
+#name {
+    margin-left: 1em;
+    margin-top: 0.65em;
+    color: #f5f5f5;
+    font-size: 3em;
+}
+
+#time {
+    margin-top: -1.5em;
+    margin-left: 1.5em;
+    color: #666d77;
+    font-size: 2em;
+}
+
+#room {
+    text-align: right;
+    margin-top: -4em;
+    margin-right: 1.5em;
+    text-decoration-line: underline;
+    color: #666d77;
+    font-style: italic;
+    font: caption;
+    font-size: 2em;
+}
+
+#lecturer {
+    text-align: right;
+    margin-right: 1.5em;
+    color: #666d77;
+    font-size: 2em;
+}
+
+
+
+
+
+#lesson-details {
+    background-color: #111419;
+    border: 1em solid;
+    border-radius: 5em;
+}
+
 #details-name {
-    margin-left: 10px;
+    margin-left: 0.5em;
+    margin-top: 0.5em;
     color: #f5f5f5;
-    font: caption;
-    font-size: 25px;
-}
-
-#details-room-name {
-    color: #f5f5f5;
-    font: caption;
-    font-size: 20px;
-    margin-left: 10px;
-}
-
-#details-room {
-    color: #666d77;
-    font: caption;
-    font-size: 20px;
-    margin-left: 120px;
-    margin-top: -42.5px;
-}
-
-#details-lecturer-name {
-    color: #f5f5f5;
-    font: caption;
-    font-size: 20px;
-    margin-left: 10px;
-}
-
-#details-lecturer {
-    color: #666d77;
-    font: caption;
-    font-size: 20px;
-    margin-left: 170px;
-    margin-top: -42.5px;
-}
-
-#details-description-name {
-    color: #f5f5f5;
-    font: caption;
-    font-size: 25px;
-    margin-left: 10px;
-}
-
-#details-description {
-    color: #666d77;
-    font: caption;
-    font-size: 20px;
-    margin-top: -10px;
-    margin-left: 10px;
+    font-size: 4em;
 }
 
 #details-type {
     color: #666d77;
-    font: caption;
-    font-size: 20px;
-    margin-left: 10px;
+    font-size: 3em;
+    margin-left: 0.75em;
+    margin-top: -1em;
 
-    margin-top: -15px;
 }
 
-#lesson-details {
-    margin-top: 10px;
-    background-color: #111419;
-    border: 5px solid;
-    border-radius: 20px;
+#details-room-name {
+    color: #f5f5f5;
+    font-size: 3em;
+    margin-left: 0.75em;
 }
 
-#lesson-details {
-    margin-top: 10px;
-    background-color: #111419;
-    border: 5px solid;
-    border-radius: 20px;
+#details-room {
+    color: #666d77;
+    font-size: 3em;
+    margin-left: 0.75em;
+    margin-top: 0em;
+    margin-top: -0.5em;
+}
+
+#details-lecturer-name {
+    color: #f5f5f5;
+    font-size: 3em;
+    margin-left: 0.75em;
+}
+
+#details-lecturer {
+    color: #666d77;
+    font-size: 3em;
+    margin-left: 0.75em;
+    margin-top: 0em;
+    margin-top: -0.5em;
+}
+
+#details-description-name {
+    color: #f5f5f5;
+    font-size: 3em;
+    margin-left: 0.75em;
+}
+
+#details-description {
+    color: #666d77;
+    font-size: 3em;
+    margin-top: 0em;
+    margin-left: 0.75em;
 }

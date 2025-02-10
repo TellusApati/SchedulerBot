@@ -28,14 +28,17 @@ function createNavigation() {
     let prevButton = document.createElement("button");
     prevButton.id = "prev-day";
     prevButton.innerText = "⇐";
+    prevButton.classList.add("navigation-button");
     prevButton.addEventListener("click", () => loadDay(-1));
 
     let targetButton = document.createElement("button");
     targetButton.id = "target-day";
+    targetButton.classList.add("navigation-button");
 
     let nextButton = document.createElement("button");
     nextButton.id = "next-day";
     nextButton.innerText = "⇒";
+    nextButton.classList.add("navigation-button");
     nextButton.addEventListener("click", () => loadDay(1));
 
     navigationBar.appendChild(prevButton);
@@ -62,11 +65,13 @@ function clearLessons() {
         lesson.remove();
         lesson = document.getElementById("lesson");
     }
-    lesson = document.getElementById("lecture")
+
+    lesson = document.getElementById("lecture");
     while (lesson != null) {
         lesson.remove();
         lesson = document.getElementById("lecture");
     }
+
 }
 
 function loadLessons() {
@@ -140,9 +145,9 @@ function createLesson(inputName, hours, minutes, inputRoom, inputLecturer, isLec
         lesson.id = "lesson";
     }
     lesson.appendChild(name);
+    lesson.appendChild(time);
     lesson.appendChild(room);
     lesson.appendChild(lecturer);
-    lesson.appendChild(time);
 
     lesson.addEventListener("click", () => openLesson(fullName, inputRoom, inputLecturer, isLecture, hours, minutes));
 
@@ -160,18 +165,11 @@ function standardizeDate(inputDate) {
 
 function setTargetDayName(day) {
     let element = document.getElementById("target-day");
+
     element.innerHTML = dayNames[day] + ". (";
     element.innerHTML += standardizeDate(targetDate.getDate()) + ".";
     element.innerHTML += standardizeDate(targetDate.getMonth() + 1) + ")";
 
-}
-
-function generateCurrentTime() {
-    let date = new Date();
-
-    let element = document.getElementById("time");
-    element.innerHTML = "Current time: " + date.getHours() + " " + date.getMinutes() + " " + date.getSeconds();
-    element.innerHTML = getWeekType();
 }
 
 function loadDay(offset) {
