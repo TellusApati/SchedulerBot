@@ -154,8 +154,6 @@ function createLesson(inputName, hours, minutes, inputRoom, inputLecturer, isLec
     lessons.appendChild(lesson);
 }
 
-
-
 function standardizeDate(inputDate) {
     if (inputDate < 10) {
         return "0" + inputDate;
