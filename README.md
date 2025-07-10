@@ -1,1 +1,8 @@
-https://docs.google.com/presentation/d/1XJoFJ3QFU2o6ida1y_qClNoeKmLQ8ynSOUyzWwu4V1g/edit?usp=drivesdk
+# Бот-расписание
+Данный (относительно тестовый) проект - телеграм-бот для отображения текущего расписания пар группы 1251 Государственного Университета "Дубна".
+
+
+# Телеграм-бот
+<img width="2765" height="2821" alt="image" src="https://github.com/user-attachments/assets/f811b5d8-ff61-403f-90a5-00849e3a258d" />
+
+Или используйте тег @UniSchedulerBot
