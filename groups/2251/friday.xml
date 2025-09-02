@@ -1,0 +1,26 @@
+<lessons>
+    <lesson>
+        <id>02</id>
+        <room>1-118</room>
+        <hours>9</hours>
+        <minutes>0</minutes>
+        <lecture>true</lecture>
+        <week>odd</week>
+    </lesson>
+    <lesson>
+        <id>09</id>
+        <room>2-103</room>
+        <hours>9</hours>
+        <minutes>0</minutes>
+        <lecture>true</lecture>
+        <week>even</week>
+    </lesson>
+    <lesson>
+        <id>07</id>
+        <room>1-122</room>
+        <hours>10</hours>
+        <minutes>40</minutes>
+        <lecture>true</lecture>
+        <week>both</week>
+    </lesson>
+</lessons>

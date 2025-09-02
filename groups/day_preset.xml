@@ -1,8 +1,7 @@
 <lessons>
     <lesson>
-        <name></name>
+        <id></id>
         <room></room>
-        <lecturer></lecturer>
         <hours></hours>
         <minutes></minutes>
         <lecture></lecture>

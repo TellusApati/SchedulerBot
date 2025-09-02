@@ -1,268 +1,62 @@
-<LESSONS>
-    <ODD>
-        <MONDAY>
-            <LESSON>
-                <NAME>(АВС) Архитектура вычислительных систем</NAME>
-                <TIME>9:00</TIME>
-                <ROOM>1-122</ROOM>
-                <LECTURE>true</LECTURE>
-                <LECTURER>Земляная Е.В.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>Математический анализ</NAME>
-                <TIME>10:40</TIME>
-                <ROOM>???</ROOM>
-                <LECTURE>true</LECTURE>
-                <LECTURER>???</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>Иностранный язык</NAME>
-                <TIME>12:50</TIME>
-                <ROOM>4-411a</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Козловская Д.С.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>Математический анализ</NAME>
-                <TIME>14:30</TIME>
-                <ROOM>2-310</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Гришанина Г.Э.</LECTURER>
-            </LESSON>
-        </MONDAY>
-        <TUESDAY>
-            <LESSON>
-                <NAME>История России</NAME>
-                <TIME>9:00</TIME>
-                <ROOM>1-120</ROOM>
-                <LECTURE>true</LECTURE>
-                <LECTURER>Король М.П.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>(АВС) Архитектура вычислительных систем</NAME>
-                <TIME>10:40</TIME>
-                <ROOM>1-214</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Земляная Е.В.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>(ИСТ) Информационные системы и технологии</NAME>
-                <TIME>12:50</TIME>
-                <ROOM>1-213</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Русакова А.А.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>Волейбол</NAME>
-                <TIME>14:20</TIME>
-                <ROOM>с/к Олимп</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Сандалова Т.В.</LECTURER>
-            </LESSON>
-        </TUESDAY>
-        <WEDNESDAY>
-            <LESSON>
-                <NAME>(ООП) Объектно-ориентированное программирование</NAME>
-                <TIME>9:00</TIME>
-                <ROOM>1-118</ROOM>
-                <LECTURE>true</LECTURE>
-                <LECTURER>Сычева М.П.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>Иностранный язык</NAME>
-                <TIME>10:40</TIME>
-                <ROOM>4-412</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Козловская Д.С.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>(ООП) Объектно-ориентированное программирование</NAME>
-                <TIME>12:50</TIME>
-                <ROOM>1-416</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Сычева М.П.</LECTURER>
-            </LESSON>
-        </WEDNESDAY>
-        <THURSDAY>
-            <LESSON>
-                <NAME>(ИСТ) Информационные системы и технологии</NAME>
-                <TIME>9:00</TIME>
-                <ROOM>1-120</ROOM>
-                <LECTURE>true</LECTURE>
-                <LECTURER>Крейдер О.А.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>Волейбол</NAME>
-                <TIME>10:40</TIME>
-                <ROOM>с/к Олимп</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Сандалова Т.В.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>Инженерная графика</NAME>
-                <TIME>12:50</TIME>
-                <ROOM>3 корп.</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Мороз В.В.</LECTURER>
-            </LESSON>
-        </THURSDAY>
-        <FRIDAY>
-            <LESSON>
-                <NAME>Математический анализ</NAME>
-                <TIME>10:40</TIME>
-                <ROOM>2-310</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Гришанина Г.Э.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>Компьютерный практикум</NAME>
-                <TIME>12:50</TIME>
-                <ROOM>4-222</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Беднякова Т.М.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>Волейбол</NAME>
-                <TIME>14:20</TIME>
-                <ROOM>с/к Олимп</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Сандалова Т.В.</LECTURER>
-            </LESSON>
-        </FRIDAY>
-        <SATURDAY></SATURDAY>
-        <SUNDAY></SUNDAY>
-    </ODD>
-    <EVEN>
-        <MONDAY>
-            <LESSON>
-                <NAME>Математический анализ</NAME>
-                <TIME>10:40</TIME>
-                <ROOM>???</ROOM>
-                <LECTURE>true</LECTURE>
-                <LECTURER>???</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>Иностранный язык</NAME>
-                <TIME>12:50</TIME>
-                <ROOM>4-411a</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Козловская Д.С.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>Математический анализ</NAME>
-                <TIME>14:30</TIME>
-                <ROOM>2-310</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Гришанина Г.Э.</LECTURER>
-            </LESSON>
-        </MONDAY>
-        <TUESDAY>
-            <LESSON>
-                <NAME>Математический анализ</NAME>
-                <TIME>9:00</TIME>
-                <ROOM>1-120</ROOM>
-                <LECTURE>true</LECTURE>
-                <LECTURER>Гришанина Г.Э.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>(АВС) Архитектура вычислительных систем</NAME>
-                <TIME>10:40</TIME>
-                <ROOM>1-214</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Земляная Е.В.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>(ИСТ) Информационные системы и технологии</NAME>
-                <TIME>12:50</TIME>
-                <ROOM>1-213</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Русакова А.А.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>Волейбол</NAME>
-                <TIME>14:20</TIME>
-                <ROOM>с/к Олимп</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Сандалова Т.В.</LECTURER>
-            </LESSON>
-        </TUESDAY>
-        <WEDNESDAY>
-            <LESSON>
-                <NAME>(ООП) Объектно-ориентированное программирование</NAME>
-                <TIME>9:00</TIME>
-                <ROOM>1-118</ROOM>
-                <LECTURE>true</LECTURE>
-                <LECTURER>Сычева М.П.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>Иностранный язык</NAME>
-                <TIME>10:40</TIME>
-                <ROOM>4-412</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Козловская Д.С.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>(ООП) Объектно-ориентированное программирование</NAME>
-                <TIME>12:50</TIME>
-                <ROOM>1-416</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Сычева М.П.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>История России</NAME>
-                <TIME>14:20</TIME>
-                <ROOM>4-316</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Король М.П.</LECTURER>
-            </LESSON>
-        </WEDNESDAY>
-        <THURSDAY>
-            <LESSON>
-                <NAME>(ИСТ) Информационные системы и технологии</NAME>
-                <TIME>9:00</TIME>
-                <ROOM>1-120</ROOM>
-                <LECTURE>true</LECTURE>
-                <LECTURER>Крейдер О.А.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>Волейбол</NAME>
-                <TIME>10:40</TIME>
-                <ROOM>с/к Олимп</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Сандалова Т.В.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>Инженерная графика</NAME>
-                <TIME>12:50</TIME>
-                <ROOM>3 корп.</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Мороз В.В.</LECTURER>
-            </LESSON>
-        </THURSDAY>
-        <FRIDAY>
-            <LESSON>
-                <NAME>Правоведение</NAME>
-                <TIME>10:40</TIME>
-                <ROOM>???</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>???</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>Компьютерный практикум</NAME>
-                <TIME>12:50</TIME>
-                <ROOM>4-222</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Беднякова Т.М.</LECTURER>
-            </LESSON>
-            <LESSON>
-                <NAME>Волейбол</NAME>
-                <TIME>14:20</TIME>
-                <ROOM>с/к Олимп</ROOM>
-                <LECTURE>false</LECTURE>
-                <LECTURER>Сандалова Т.В.</LECTURER>
-            </LESSON>
-        </FRIDAY>
-        <SATURDAY></SATURDAY>
-        <SUNDAY></SUNDAY>
-    </EVEN>
-</LESSONS>
+<lessons>
+    <lesson>
+        <id>01</id>
+        <name>(ТВМС) Теория вероятностей и математическая статистика</name>
+        <short-name>ТВМС</short-name>
+        <lecturer>Ермольчик В.Л.</lecturer>
+    </lesson>
+    <lesson>
+        <id>02</id>
+        <name>(В-Т) Веб-технологии</name>
+        <short-name>Веб-технологии</short-name>
+        <lecturer>Филозова И.А. / Бархатова И.А.</lecturer>
+    </lesson>
+    <lesson>
+        <id>03</id>
+        <name>(СТ) Сети и телекоммуникации</name>
+        <short-name>Сети и телекоммуникации</short-name>
+        <lecturer>Торкель Д.И.</lecturer>
+    </lesson>
+    <lesson>
+        <id>04</id>
+        <name>(МО) Методы оптимизации</name>
+        <short-name>Методы оптимизации</short-name>
+        <lecturer>Крейдер О.А.</lecturer>
+    </lesson>
+    <lesson>
+        <id>05</id>
+        <name>Иностранный язык</name>
+        <short-name>Иностранный язык</short-name>
+        <lecturer>Козловская Д.С.</lecturer>
+    </lesson>
+    <lesson>
+        <id>06</id>
+        <name>Баскетбол</name>
+        <short-name>Баскетбол</short-name>
+        <lecturer>Чебыкина Е.В.</lecturer>
+    </lesson>
+    <lesson>
+        <id>07</id>
+        <name>(ДМ) Дискретная математика</name>
+        <short-name>Дискретная математика</short-name>
+        <lecturer>Дедович Т.Г.</lecturer>
+    </lesson>
+    <lesson>
+        <id>08</id>
+        <name>(САОД) Структуры и алгоритмы обработки данных</name>
+        <short-name>САОД</short-name>
+        <lecturer>Сычева М.П.</lecturer>
+    </lesson>
+    <lesson>
+        <id>09</id>
+        <name>Компьютерная графика</name>
+        <short-name>Компьютерная графика</short-name>
+        <lecturer>Таначева Т.В. / Роенко А.О.</lecturer>
+    </lesson>
+    <lesson>
+        <id>10</id>
+        <name>(ДУПЗ) Дифференциальные уравнения в прикладных задачах</name>
+        <short-name>ДУПЗ</short-name>
+        <lecturer>Чулуунбаатар Г. / Полуян С.В.</lecturer>
+    </lesson>
+</lessons>
